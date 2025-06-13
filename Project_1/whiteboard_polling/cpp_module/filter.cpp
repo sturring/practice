@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
-
+#include <pybind11/pybind11.h>
+#include <pybind11/stl.h>
 
 std::vector<unsigned char> blur_filter(const std::vector<unsigned char>& input, int width, int height) {
     std::vector<unsigned char> output = input;
@@ -35,8 +36,7 @@ std::vector<unsigned char> blur_filter(const std::vector<unsigned char>& input, 
     return output;
 }
 
-#include <pybind11/pybind11.h>
-#include <pybind11/stl.h>
+
 
 namespace py = pybind11;
 
